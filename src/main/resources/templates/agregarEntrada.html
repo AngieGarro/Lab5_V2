@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Agregar entrada al Spring Journal</title>
+</head>
+<body>
+<h1>Insertar</h1>
+<form action="#" th:action="@{/agregarEntrada}" th:object="${journal}" method="post">
+    <label for="title">Title</label>
+    <input type="text" th:field="*{title}"  id="title"/>
+    <label for="Summary">Summary</label>
+    <input type="text" th:field="*{summary}"  id="Summary"/>
+    <input type="submit" value="add entry">
+</form>
+<a href="/">Volver al principal</a>
+</body>
+</html>
